@@ -1,0 +1,8 @@
+<h1>Listar libros</h1>
+
+{% for libro in libros %}
+    <h2>{{ libro.titulo }}</h2>
+    <p>{{ libro.autor }} - {{ libro.genero }} - {{ libro.ano_de_publicacion }}</p>
+    <li><a href="{% url 'actualizar_libro' libro.id %}">Actualizar</a></li>
+    <li><a href="{% url 'eliminar_libro' libro.id %}">Eliminar</a></li>
+{% endfor %}
